@@ -1,33 +1,27 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import About from "./pages/About";
 import Users from "./pages/Users";
 import Home from "./pages/Home";
+import Images from "./pages/Images";
+import Videos from "./pages/Videos";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div>
+    <div>
+      <BrowserRouter>
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
+          <Link to="/">Home</Link>
+          <Link to="/images">Images</Link>
+          <Link to="/videos">Videos</Link>
+          <Link to="/users">Users</Link>
         </nav>
-
         <Routes>
-          <Route path="/about" element={<About />} />
+          <Route path="/images" element={<Images />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/users" element={<Users />} />
           <Route path="/" element={<Home />} />
         </Routes>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 }
