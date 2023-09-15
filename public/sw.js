@@ -6,17 +6,10 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(cacheData).then((cacheres) => {
       cacheres.addAll([
-        "/static/js/bundle.js",
-        "/static/js/vendors~main.chunk.js",
-        "/static/js/main.chunk.js",
         "/favicon.ico",
         "/index.html",
-        "/assets/1-9e19bee2.png",
         "/images/",
         "/images/1.png",
-        "/index.html",
-        "/styles.css",
-        "/script.js",
       ]);
     })
   );
