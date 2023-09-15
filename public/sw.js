@@ -11,11 +11,9 @@ this.addEventListener("install", (event) => {
         "/static/js/main.chunk.js",
         "/favicon.ico",
         "/index.html",
-        "/",
-        "/users",
-        "/videos",
+        "/assets",
         "/images",
-        "/images-public",
+        "/images/1.png",
       ]);
     })
   );
