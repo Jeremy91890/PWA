@@ -13,7 +13,8 @@ this.addEventListener("install", (event) => {
         "/index.html",
         "/",
         "/users",
-        "/about",
+        "/videos",
+        "/images",
       ]);
     })
   );
