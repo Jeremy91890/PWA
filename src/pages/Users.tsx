@@ -36,7 +36,7 @@ export default function Users() {
     }
 
     try {
-      const res = await addData(Stores.Users, { name, email, id });
+      await addData(Stores.Users, { name, email, id });
       // refetch users after creating data
       handleGetUsers();
     } catch (err: unknown) {
