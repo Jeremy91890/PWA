@@ -2,7 +2,7 @@ console.log("Registered");
 
 //CHACHE ALL FILES
 let cacheData = "appv1";
-this.addEventListener("install", (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(cacheData).then((cacheres) => {
       cacheres.addAll([
@@ -11,9 +11,12 @@ this.addEventListener("install", (event) => {
         "/static/js/main.chunk.js",
         "/favicon.ico",
         "/index.html",
-        "/assets",
-        "/images",
+        "/assets/1-9e19bee2.png",
+        "/images/",
         "/images/1.png",
+        "/index.html",
+        "/styles.css",
+        "/script.js",
       ]);
     })
   );
