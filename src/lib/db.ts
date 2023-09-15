@@ -28,6 +28,7 @@ export const initDB = (): Promise<boolean | IDBDatabase> => {
     };
 
     request.onsuccess = (e) => {
+      console.log(e);
       db = request.result;
       // get current version and store it
       version = db.version;
@@ -35,6 +36,7 @@ export const initDB = (): Promise<boolean | IDBDatabase> => {
     };
 
     request.onerror = (e) => {
+      console.log(e);
       resolve(false);
     };
   });
