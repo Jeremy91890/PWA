@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 const ButtonAddToHomeScreen: React.FC = () => {
-  // const [supportsPwa, setSupportsPwa] = useState<boolean>(false);
+  const [supportsPwa, setSupportsPwa] = useState<boolean>(false);
   const [promptInstall, setPromptInstall] = useState<any | null>(null);
 
   useEffect(() => {
     const handler = (e: any) => {
       e.preventDefault();
-      // setSupportsPwa(true);
+      setSupportsPwa(true);
       setPromptInstall(e);
     };
 
@@ -36,7 +36,7 @@ const ButtonAddToHomeScreen: React.FC = () => {
   return (
     <button
       onClick={handleInstallClick}
-      // style={{ display: supportsPwa ? "block" : "none" }}
+      style={{ display: supportsPwa ? "block" : "none" }}
     >
       Install App
     </button>

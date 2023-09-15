@@ -15,6 +15,7 @@ this.addEventListener("install", (event) => {
         "/users",
         "/videos",
         "/images",
+        "/images-public",
       ]);
     })
   );
