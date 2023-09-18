@@ -4,7 +4,11 @@ import { VitePWA, VitePWAOptions } from "vite-plugin-pwa";
 
 const manifestForPlugin: Partial<VitePWAOptions> = {
   registerType: "prompt",
-  includeAssets: ["favicon.svg", "robots.txt", "apple-touch-icon.png"],
+  // TO cache all the files bro
+  workbox: {
+    globPatterns: ["**/*"],
+  },
+  includeAssets: ["**/*"],
   manifest: {
     name: "My App",
     short_name: "My App",
