@@ -7,6 +7,7 @@ import {
   getStoreData,
   initDB,
 } from "../lib/db";
+import image from "../assets/2.png";
 
 export default function Users() {
   const [isDBReady, setIsDBReady] = useState<boolean>(false);
@@ -70,6 +71,7 @@ export default function Users() {
   return (
     <main style={{ textAlign: "center", marginTop: "3rem" }}>
       <h1>IndexedDB</h1>
+      <img src={image} alt="indexedDB" />
       {!isDBReady ? (
         <button onClick={handleInitDB}>Init DB</button>
       ) : (
